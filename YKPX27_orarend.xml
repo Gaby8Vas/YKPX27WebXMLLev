@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE YKPX27_orarend SYSTEM "YKPX27_orarend.dtd">
+
+<YKPX27_orarend>
+
+    <ora id="egy" tipus="eloadas">
+        <kurzus>Webes adatkezelő környezetek</kurzus>
+        <idopont>
+            <nap>Péntek</nap>
+            <tol>12:30</tol>
+            <ig>16:00</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Dr. BL</oktato>
+        <szak>Mérnök-informatikus Bsc</szak>
+    </ora>
+
+    <ora id="ketto" tipus="gyakorlat">
+        <kurzus>Német</kurzus>
+        <idopont>
+            <nap>Péntek</nap>
+            <tol>10:00</tol>
+            <ig>12:00</ig>
+        </idopont>
+        <helyszin>A1/318</helyszin>
+        <oktato>Illés Mária</oktato>
+        <szak>Mérnök-informatikus Bsc</szak>
+    </ora>
+
+    <ora id="harom" tipus="eloadas">
+        <kurzus>Web technológiák</kurzus>
+        <idopont>
+            <nap>Szombat</nap>
+            <tol>8:30</tol>
+            <ig>15:10</ig>
+        </idopont>
+        <helyszin>Online</helyszin>
+        <oktato>Agárdi Anita</oktato>
+        <szak>Mérnök-informatikus Bsc</szak>
+    </ora>
+
+</YKPX27_orarend>
