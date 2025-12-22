@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="VizsgaAdatok">
+    <xs:complexType>
+      <xs:sequence>
+
+        <xs:element name="Hallgatok">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Hallgato" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Nev" type="xs:string"/>
+                    <xs:element name="Neptun" type="xs:string"/>
+                    <xs:element name="Szak" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="Jegyzokonyvek">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Jegyzokonyv" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Neptun" type="xs:string"/>
+                    <xs:element name="Targy" type="xs:string"/>
+                    <xs:element name="Jegy" type="xs:int"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- XSD KEY: Hallgató Neptun egyedi -->
+    <xs:key name="hallgatoKey">
+      <xs:selector xpath="Hallgatok/Hallgato"/>
+      <xs:field xpath="Neptun"/>
+    </xs:key>
+
+    <!-- XSD KEYREF: Jegyzőkönyv csak létező hallgatóra -->
+    <xs:keyref name="jegyzokonyvHallgatoRef" refer="hallgatoKey">
+      <xs:selector xpath="Jegyzokonyvek/Jegyzokonyv"/>
+      <xs:field xpath="Neptun"/>
+    </xs:keyref>
+
+  </xs:element>
+
+</xs:schema>

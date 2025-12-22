@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<egyetem>
+
+    <!-- Tanszékek -->
+    <tanszekek>
+        <tanszek id="T1">
+            <nev>Informatikai Tanszék</nev>
+            <iroda>B/203</iroda>
+            <telefon>+361234567</telefon>
+            <kar>TTK</kar>
+        </tanszek>
+
+        <tanszek id="T2">
+            <nev>Matematika Tanszék</nev>
+            <iroda>C/101</iroda>
+            <telefon>+361987654</telefon>
+            <kar>TTK</kar>
+        </tanszek>
+    </tanszekek>
+
+    <!-- Oktatók -->
+    <oktatok>
+        <oktato id="O1" tanszek_ref="T1">
+            <nev>
+                <vezeteknev>Kiss</vezeteknev>
+                <keresztnev>Péter</keresztnev>
+            </nev>
+            <beosztas>docens</beosztas>
+            <email>kiss.peter@uni.hu</email>
+        </oktato>
+
+        <oktato id="O2" tanszek_ref="T2">
+            <nev>
+                <vezeteknev>Nagy</vezeteknev>
+                <keresztnev>Anna</keresztnev>
+            </nev>
+            <beosztas>adjunktus</beosztas>
+            <email>nagy.anna@uni.hu</email>
+        </oktato>
+    </oktatok>
+
+    <!-- Hallgatók -->
+    <hallgatok>
+        <hallgato id="H1">
+            <nev>
+                <vezeteknev>Kovács</vezeteknev>
+                <keresztnev>Bence</keresztnev>
+            </nev>
+            <szuletesi_datum>2002-05-12</szuletesi_datum>
+            <email>kovacs.bence@gmail.com</email>
+            <email>bence@uni.hu</email>
+            <evfolyam>3</evfolyam>
+        </hallgato>
+
+        <hallgato id="H2">
+            <nev>
+                <vezeteknev>Szabó</vezeteknev>
+                <keresztnev>Dóra</keresztnev>
+            </nev>
+            <szuletesi_datum>2001-11-03</szuletesi_datum>
+            <email>szabo.dora@gmail.com</email>
+            <evfolyam>4</evfolyam>
+        </hallgato>
+    </hallgatok>
+
+    <!-- Termek -->
+    <termek>
+        <terem id="R1">
+            <epulet>A</epulet>
+            <terem_szam>101</terem_szam>
+            <ferohely>40</ferohely>
+            <tipus>előadó</tipus>
+        </terem>
+
+        <terem id="R2">
+            <epulet>B</epulet>
+            <terem_szam>202</terem_szam>
+            <ferohely>25</ferohely>
+            <tipus>számítógépes</tipus>
+        </terem>
+    </termek>
+
+    <!-- Kurzusok és felvételek -->
+    <kurzusok>
+        <kurzus id="K1" oktato_ref="O1" terem_ref="R1">
+            <nev>XML adatkezelés</nev>
+            <kredit>5</kredit>
+            <felev>2024/25/1</felev>
+            <oraszam>4</oraszam>
+
+            <!-- Felvételek -->
+            <felvetelek>
+                <felvetel hallgato_ref="H1">
+                    <jegy>5</jegy>
+                    <teljesites_datuma>2024-12-15</teljesites_datuma>
+                    <statusz>teljesítve</statusz>
+                </felvetel>
+
+                <felvetel hallgato_ref="H2">
+                    <jegy>4</jegy>
+                    <teljesites_datuma>2024-12-16</teljesites_datuma>
+                    <statusz>teljesítve</statusz>
+                </felvetel>
+            </felvetelek>
+        </kurzus>
+    </kurzusok>
+
+</egyetem>
